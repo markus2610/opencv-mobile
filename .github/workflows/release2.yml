@@ -224,7 +224,7 @@ jobs:
         rm -rf modules/ts
         rm -rf modules/dnn
         sed -e 's/__VERSION__/${{ env.opencv-version }}/g' ../patches/Info.plist > ./Info.plist
-        cp ../opencv4_cmake_options.txt ./options.txt
+        cp ../opencv4_cmake_options_custom.txt ./options.txt
         cd ..
         mv opencv-${{ env.opencv-version }} opencv-mobile-${{ env.opencv-version }}
         zip -9 -r opencv-mobile-${{ env.opencv-version }}.zip opencv-mobile-${{ env.opencv-version }}
